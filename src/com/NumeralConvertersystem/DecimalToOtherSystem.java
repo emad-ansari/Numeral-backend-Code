@@ -56,8 +56,5 @@ public class DecimalToOtherSystem {
         else {
             return binaryToHexadecimal1( num, current_base,  final_base );
         }
-
     }
-
-
 }

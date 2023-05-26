@@ -55,8 +55,5 @@ public class HexadecimalToOtherSystem {
     public static int hexadecimalToBinary(String num, int current_base, int final_base){
         int decimal_value = hexadecimalToDecimal(num, current_base, final_base);
         return decimalToOther(decimal_value, current_base, final_base);
-
     }
-
-
 }
