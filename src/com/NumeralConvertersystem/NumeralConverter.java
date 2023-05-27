@@ -6,9 +6,7 @@ public class NumeralConverter {
     private String Hexadecimal_value;
     private int octal_value;
 
-    void fun(){
-        System.out.println("Hello ");
-    }
+
 
 
 

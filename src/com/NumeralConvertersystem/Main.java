@@ -9,9 +9,12 @@ public class Main {
         String hexNumber;
 
 
+
         System.out.println("Enter the current base: ");
         current_base = in.nextInt();
         System.out.println("Enter the final base: ");
+
+
         final_base = in.nextInt();
         System.out.println("Enter the number: ");
 
