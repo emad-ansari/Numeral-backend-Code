@@ -8,12 +8,9 @@ public class BinaryToOtherSystem {
     // 2. binary to octal
     // 3. binary to hexadecimal
 
-    public static void main(String[] args) {
 
-        System.out.println(binaryToHexadecimal(10101010, 2, 16));
-    }
 
-    public static  int binaryToDecimal(int num, int current_base){
+    public   int binaryToDecimal(int num, int current_base){
         if (num == 0){
             return 0;
         }
@@ -29,7 +26,7 @@ public class BinaryToOtherSystem {
     }
 
 
-    public static int binaryToOctal(int num, int current_base, int final_base){
+    public  int binaryToOctal(int num, int current_base, int final_base){
         ArrayList<Integer> list = new ArrayList<>();
         int ans = 0;
 
@@ -49,7 +46,7 @@ public class BinaryToOtherSystem {
 
     }
     // below code is not working properly
-    public static String binaryToHexadecimal(int num, int current_base, int final_base ){
+    public  String binaryToHexadecimal(int num, int current_base, int final_base ){
         int decimal_value = binaryToDecimal(num, current_base);
         if(decimal_value == 10){
             return "A";
@@ -75,7 +72,7 @@ public class BinaryToOtherSystem {
 
 
     }
-    public static String binaryToHexadecimal1(int num, int current_base, int final_base){
+    public  String binaryToHexadecimal1(int num, int current_base, int final_base){
         ArrayList<String> list = new ArrayList<>();
 
         String ans = "";

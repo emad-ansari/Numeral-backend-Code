@@ -1,18 +1,14 @@
 package com.NumeralConvertersystem;
 
-import static com.NumeralConvertersystem.DecimalToOtherSystem.decimalToOther;
 
-public class HexadecimalToOtherSystem {
+public class HexadecimalToOtherSystem extends DecimalToOtherSystem {
     /*
        1. Hexadecimal to decimal
        2. Hexadecimal to binary
        3.Hexadecimal to octal
      */
-    public static void main(String[] args) {
-        System.out.println(hexadecimalToBinary("AB", 16, 8));
-    }
 
-    public static int hexadecimalToDecimal(String num, int current_base, int final_base){
+    public  int hexadecimalToDecimal(String num, int current_base, int final_base){
         int ans = 0;
         int last_digit = 0;
         int j = 0;
@@ -52,8 +48,14 @@ public class HexadecimalToOtherSystem {
         return ans;
     }
 
-    public static int hexadecimalToBinary(String num, int current_base, int final_base){
+    public  int hexadecimalToBinary(String num, int current_base, int final_base){
         int decimal_value = hexadecimalToDecimal(num, current_base, final_base);
-        return decimalToOther(decimal_value, current_base, final_base);
+        HexadecimalToOtherSystem obj = new HexadecimalToOtherSystem();
+        return obj.decimalToOther(decimal_value, current_base, final_base);
     }
+    public int hexadecimalTOOctal(String num, int current_base, int final_base){
+        return 0;
+
+    }
+
 }

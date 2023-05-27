@@ -2,20 +2,17 @@ package com.NumeralConvertersystem;
 
 import java.util.ArrayList;
 
-import static com.NumeralConvertersystem.DecimalToOtherSystem.decimalToHexadecimal;
 
-public class OctalToOtherSystem {
+
+public class OctalToOtherSystem extends DecimalToOtherSystem{
     /*
         1. Octal to binary
         2. Octal to decimal
         3.Octal to Hexadecimal
 
      */
-    public static void main(String[] args) {
-        System.out.println(octalToHexadecimal(18, 8, 16));
-    }
 
-    public static String octalToBinary(int num, int current_base, int final_base) {
+    public  String octalToBinary(int num, int current_base, int final_base) {
         int decimal_value = octalToDecimal(num, current_base, final_base);
         if (decimal_value != -1) {
             ArrayList<Integer> list = new ArrayList<>();
@@ -39,7 +36,7 @@ public class OctalToOtherSystem {
 
     }
 
-    public static boolean checkOctalDigit(int num){
+    public  boolean checkOctalDigit(int num){
         int last_digit = 0;
         while (num != 0){
             last_digit = num % 10;
@@ -52,7 +49,7 @@ public class OctalToOtherSystem {
         return true;
     }
 
-    public static int octalToDecimal(int num, int current_base, int final_base){
+    public  int octalToDecimal(int num, int current_base, int final_base){
         if (num == 0){
             return 0;
         }
@@ -72,7 +69,7 @@ public class OctalToOtherSystem {
 
     }
 
-    public static String octalToHexadecimal(int num, int current_base, int final_base){
+    public  String octalToHexadecimal(int num, int current_base, int final_base){
         // first convert octal to decimal followed by decimal to hexadecimal
         if(checkOctalDigit(num)){
             int decimal_value  = octalToDecimal(num,current_base, final_base);
