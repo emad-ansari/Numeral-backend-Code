@@ -31,6 +31,7 @@ public class BinaryToOtherSystem {
         int ans = 0;
 
         int rem = 0;
+        // get the decimal equivalent of binary number and convert it into octal.
         int decimal_value = binaryToDecimal(num, current_base);
         while(decimal_value != 0){
             rem = decimal_value % final_base;
